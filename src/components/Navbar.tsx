@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Notification } from '@phosphor-icons/react';
 import NotificationDialog from './NotificationDialog.js';
 import useWindowSize from '../hooks/useWindowSize.ts';
-import { Coffee, DiscordLogo, GithubLogo } from '@phosphor-icons/react';
+import { DiscordLogo, GithubLogo } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
 import animatedLogo from '/animated_logo.svg';
 import Changelog from './Sidebar/Changelog.tsx';
@@ -49,11 +49,8 @@ const Navbar = () => {
                 onClick={() => navigate('/dashboard')}
             >
                 <img src={animatedLogo} className="w-5 h-5 md:hidden" />
-                <h1 className="text-center text-md md:text-2xl">
-                    <span className="bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                        GATE
-                    </span>
-                    Quest
+                <h1 className="text-center text-md md:text-2xl cursor-pointer">
+                    Gate<span className="bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent">Nexus</span>
                 </h1>
             </div>
 
@@ -99,9 +96,6 @@ const Navbar = () => {
                         </motion.button>
                     )}
                     {isMobile && <Changelog />}
-                    {isMobile && (
-                        
-                    )}
                     <motion.button
                         aria-label="Notifications"
                         className="cursor-pointer"
