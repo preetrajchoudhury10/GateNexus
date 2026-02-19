@@ -1,47 +1,34 @@
-# v0.9.5 - 2026-02-08
+# 📄 Project Change Log: GateNexus
 
-- Added Clear Data feature, to clear your current progress and start fresh for new session. It has a limit for doing this at most 5 times only. Implemented [#33](https://github.com/Jeeteshwar/GateNexus/issues/33).
-- Added Changelog button to see the changelogs without visiting [Github](https://github.com/Jeeteshwar/GateNexus). Implemented [#40](https://github.com/Jeeteshwar/GateNexus/issues/40).
-- Updated the GATE exam date for next year and also the heatmap. Will add a way to view the last year data irrespective of the version of the account you are on.
-- Clicking on the GateNexus icon on the Navbar in mobile devices will bring to Dashboard.
+## 🚀 Version History
 
-# v0.9.4-hotfix - 2026-02-01
+---
 
-- Fixed the ActionButtons in the QuestionCard bug for desktop screen.
-- Added last version changelog.
+### v1.1.0 — Platform Stabilization
+*Release Date: February 2026*
 
-# v0.9.4 - 2026-01-30
+#### 🎯 Major Changes
+- **Cloud Deployment**: Production environment established on **Vercel** with custom Vite build configurations
+- **Database**: Backend connected to custom-managed **Supabase** instance
+- **Security**: API keys secured via **Environment Variable** injection; `.gitignore` updated
+- **Authentication**: **Google OAuth 2.0** configured through Google Cloud Console
 
-- Re-embracing rounded corners.
-- Fixed issue [#37](https://github.com/Jeeteshwar/GateNexus/issues/34).
-- Fixed [#36](https://github.com/Jeeteshwar/GateNexus/issues/36).
+#### 🐛 Bug Fixes
+- Removed legacy donation components causing runtime errors
+- Fixed build-time syntax errors in `Navbar.tsx` — resolved empty conditional rendering
 
-# v0.9.3 - 2026-01-24
+---
 
-- Removed ugly scrollbars in chrome browsers (need to be tested).
-- Auto-refresh logic for questions added, now no more clear cache and re-login.
+### v1.0.0 — Initial Release
+*Release Date: January 2026*
 
-# v0.9.2 - 2026-01-14
+#### 🏗️ Core Architecture
+- **Framework**: **React 18** + **Vite** for frontend rendering
+- **UI Components**: **Framer Motion** animations; **Phosphor Icons**
+- **Routing**: `react-router-dom` v6 for dashboard navigation
+- **Styling**: Tailwind CSS
 
-- Updated mobile dock to make it more clean and modern.
-- Updated site.webanifest with new screenshots.
-
-# v0.9.1 - 2026-01-14
-
-- Updated the GATE exam date and completion date.
-
-# v0.9.0 - 2026-01-12
-
-- Added **Topic Test** feature, will add documentation for Supabase in next minor version.
-- Added animated API support.
-- Removed ghost API calls.
-- Fixed bug which prevented changing name.
-- Added [Dexie](https://dexie.org/) for indexedDB and for future local-first solution.
-
-# v0.8.0 – 2025-12-16
-
-- Added **Smart Revision** feature. See [SUPABASE DOCS](https://github.com/Jeeteshwar/GateNexus/blob/master/SUPABASE_DOCUMENTATION.md) for more information.
-- Rolled out **AI explanations**. Explanations for questions will be added incrementally.
-- Removed copy link from donations page for now and updated the instructions accordingly.
-- Implemented ShadCN in the project which fixes Issue [#12](https://github.com/Jeeteshwar/GateNexus/issues/12)
-- Added **Changelog** page to track updates and releases.
+#### 📦 Initial Features
+- User dashboard layout
+- Course material structure
+- Navigation framework

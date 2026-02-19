@@ -71,7 +71,7 @@ const Navbar = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <a
-                                href="https://discord.gg/dFmg3g52c5"
+                                href=""
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

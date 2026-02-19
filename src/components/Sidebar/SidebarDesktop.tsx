@@ -97,10 +97,10 @@ export const SidebarDesktop = ({
                         <div className={`${isCollapsed ? 'hidden' : 'block'}`}>
                             <Title className="bg-gradient-to-br from-blue-400 to-blue-600 bg-clip-text text-transparent">
                                 GATE
-                                <span className="text-black dark:text-white">Quest</span>
+                                <span className="text-black dark:text-white">Nexus</span>
                             </Title>
                             <Text className="text-xs text-gray-500 dark:text-gray-400 font-medium mt-[-5px] text-right w-full">
-                                Good Luck
+                                Good Luck !!
                             </Text>
                         </div>
                     </motion.div>
@@ -140,7 +140,7 @@ export const SidebarDesktop = ({
                             aria-label="Join our Discord"
                         >
                             <a
-                                href="https://discord.gg/dFmg3g52c5"
+                                href=""
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
