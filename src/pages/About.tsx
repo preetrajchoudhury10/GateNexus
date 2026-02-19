@@ -8,6 +8,7 @@ import { Text, Title } from '@/components/ui/typography.js';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card.js';
 import { Button } from '@/components/ui/button.js';
 import animatedLogo from '/animated_logo.svg';
+
 type Answer =
     | {
           type: 'text';
@@ -19,7 +20,6 @@ type Answer =
           href: string;
       };
 
-// To render links in the FAQ section
 const renderAnswer = (answerParts: Answer[]) => {
     return answerParts.map((part, index) => {
         if (part.type === 'link') {
@@ -35,7 +35,6 @@ const renderAnswer = (answerParts: Answer[]) => {
                 </a>
             );
         }
-        // Otherwise, it's just plain text
         return <span key={index}>{part.content}</span>;
     });
 };
@@ -70,12 +69,12 @@ const About = ({ landing = false }: AboutProps) => {
                 </motion.div>
                 <motion.div variants={fadeInUp}>
                     <Text className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mt-[-15px]">
-                        My Mission: Have a community of great people within my reach.
+                        Our Mission: Building a community for high-achieving engineering students.
                     </Text>
                 </motion.div>
             </motion.header>
 
-            {/* Grid Section with Scroll-Triggered Stagger Animation */}
+            {/* Grid Section */}
             <motion.section
                 initial="initial"
                 whileInView="animate"
@@ -91,9 +90,8 @@ const About = ({ landing = false }: AboutProps) => {
                         </CardHeader>
                         <CardContent>
                             <Text className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                                There are many websites great for GATE prep out there like GO or
-                                Examside but the UI felt less modern to me. I wanted to provided a
-                                clean, distraction-free UI so here it is.
+                                We wanted to provide a clean, modern, and distraction-free UI for GATE preparation. 
+                                GateNexus is designed to help students focus on what matters most: learning and practice.
                             </Text>
                         </CardContent>
                     </Card>
@@ -102,12 +100,12 @@ const About = ({ landing = false }: AboutProps) => {
                     <Card className="bg-gray-100 dark:bg-zinc-800/50 rounded-md border border-transparent dark:border-zinc-800">
                         <CardHeader className="flex items-center">
                             <Heart size={30} className="mr-3 text-red-500" />
-                            <Title className="text-3xl font-bold">Join Me</Title>
+                            <Title className="text-3xl font-bold">Join the Community</Title>
                         </CardHeader>
                         <CardContent>
                             <Text className="text-gray-700 dark:text-gray-300 mb-6">
-                                I want this to become everyone's goto website for GATE prep so
-                                contributions are highly appreciated.
+                                We want this to become the go-to platform for GATE aspirants. 
+                                Contributions and community engagement are what drive this project forward.
                             </Text>
                             <div className="flex flex-col space-y-2">
                                 <div className="flex flex-col lg:flex-row lg:space-x-2 space-y-2 lg:space-y-0">
@@ -132,7 +130,7 @@ const About = ({ landing = false }: AboutProps) => {
                                         <motion.a
                                             whileHover={{ scale: 1.05 }}
                                             whileTap={{ scale: 0.95 }}
-                                            href=""
+                                            href="#"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -140,16 +138,7 @@ const About = ({ landing = false }: AboutProps) => {
                                         </motion.a>
                                     </Button>
                                 </div>
-                                <Button asChild className=" bg-green-500 hover:bg-green-400 flex-1">
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        onClick={() => navigate('/donate')}
-                                        rel="noopener noreferrer"
-                                    >
-                                        <Coffee className="mr-2" /> Buy Me A Chai
-                                    </motion.button>
-                                </Button>
+                                {/* Legacy donation button removed to prevent build errors */}
                             </div>
                         </CardContent>
                     </Card>
